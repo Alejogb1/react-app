@@ -5,13 +5,10 @@ import {Todoitem} from "./Todoitem";
 import {PropTypes} from "prop-types";
 
 export default class Todos extends Component {
-        markComplete = () => {
-                        console.log("hello")
 
-        }
     render () {
             return this.props.todos.map((todo)=>
-                <Todoitem key={todo.id} todo={todo} markComplete={this.markComplete}/>
+                <Todoitem key={todo.id} todo={todo} markComplete={this.props.markComplete}/>
             )
           
     }
